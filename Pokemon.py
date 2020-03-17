@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import operator
 
-df = pd.read_csv("Pandas/pokemon_data.csv")
+df = pd.read_csv("C:/Users/guilh/Desktop/python/Pandas/Pokemon/pokemon_data.csv")
 #print(df.head(n=6))
 #print(df.columns)
 

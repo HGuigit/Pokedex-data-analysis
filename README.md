@@ -1,2 +1,2 @@
 # Trying to learn git
-Pokemon analysis in pandas python
+Pokemon analysis in pandas pythong
