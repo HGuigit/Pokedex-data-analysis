@@ -99,12 +99,3 @@ Attack = list(new_df['Attack'])
 plt.bar(types, Attack)
 plt.title('Pokemon Attack, Type sorted.')
 plt.show()
-
-for i in range(10):
-    print('2')
-
-for i in range(10):
-    print('2')
-
-for i in range(10):
-    print('2')
