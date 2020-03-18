@@ -99,14 +99,16 @@ types2 = list(new_df.index.values)
 
 hp = list(new_df['HP'])
 
-print(new_df)
-
 #print(new_df)
 
 #sorted_attack = sorted(Attack.items(), key=operator.itemgetter(1)) #lista de tuplas
 
 #print(Attack)
 #print(types)
+
+#df['count'] = 1
+#print(df.groupby(['Type 1','Type 2']).count()['count'])#Numero de pokemons contados por tipo 1 e tipo 2
+
 
 plt.bar(types, Attack)
 plt.title('Pokemon Attack, Type sorted.')
@@ -115,3 +117,4 @@ plt.show()
 plt.bar(types2, hp)
 plt.title('Pokemon Hp, Type sorted.')
 plt.show()
+
