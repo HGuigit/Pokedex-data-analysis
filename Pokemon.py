@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt 
 import operator
+import re
+
 
 df = pd.read_csv("C:/Users/guilh/Desktop/python/Pandas/Pokemon/pokemon_data.csv")
 #print(df.head(n=6))
@@ -65,6 +67,8 @@ df = df[cols[0:4] + [cols[-1]] + cols[4:12]]#Troca a coluna Total de lugar
 #new_df = df.loc[df['Name'].str.contains('^pi[a-z]*', flags=re.I, regex = True)]
 #df.loc[df['Type 1'] == 'Fire', 'Type 1'] = 'Flamer'#acha os fire na coluna type 1 e modifica para flamer
 #df.loc[df['Type 1'] == 'Fire', 'Legendary'] = True #acha os Fire na coluna type 1 e modifica seu legendary para True
+#df.loc[df['Total'] > 500, ['Generation', 'Legendary']] = 'Test Value'
+#df.loc[df['Total'] > 500, ['Generation', 'Legendary']] = ['Test 1', 'Test 2']
 df['Good'] = False
 df['Average'] = False
 df['Fantastic'] = False
@@ -89,6 +93,14 @@ types = list(new_df.index.values)
 
 Attack = list(new_df['Attack'])
 
+new_df = new_df.sort_values('HP', ascending = True)
+
+types2 = list(new_df.index.values)
+
+hp = list(new_df['HP'])
+
+print(new_df)
+
 #print(new_df)
 
 #sorted_attack = sorted(Attack.items(), key=operator.itemgetter(1)) #lista de tuplas
@@ -98,4 +110,8 @@ Attack = list(new_df['Attack'])
 
 plt.bar(types, Attack)
 plt.title('Pokemon Attack, Type sorted.')
+plt.show()
+
+plt.bar(types2, hp)
+plt.title('Pokemon Hp, Type sorted.')
 plt.show()
